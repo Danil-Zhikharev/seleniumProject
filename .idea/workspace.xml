@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95704746-8f7c-4753-aef7-4d26327fbfb7" name="Changes" comment="Commit_18.12_18:42">
+    <list default="true" id="95704746-8f7c-4753-aef7-4d26327fbfb7" name="Changes" comment="Commit_19.12_00:10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/web/CallbackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/web/CallbackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +63,19 @@
       <recent name="C:\Users\User\IdeaProjects\seleniumProject\driver\Win" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CallbackTest">
-    <configuration name="CallbackTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="clean gradle" />
+      <command value="gradle clean build" />
+      <command value="./gradlew headless allTests" />
+      <command value=".gradlew headless allTests" />
+      <command value="alltests" />
+      <command value="gradlew headless" />
+      <command value="gradlew headless allTests" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.CallbackTest (1)">
+    <configuration name="CallbackTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -80,29 +89,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ru.netology.web.CallbackTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CallbackTest.shouldTestErrorColorOfCheckbox" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorColorOfCheckbox&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,7 +121,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CallbackTest.shouldTestErrorMessageNullPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="seleniumProject [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -146,19 +132,18 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorMessageNullPhone&quot;" />
+            <option value="clean" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CallbackTest.shouldTestErrorMessagePhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="seleniumProject [headless allTests]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,25 +154,45 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorMessagePhone&quot;" />
+            <option value="headless" />
+            <option value="allTests" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="seleniumProject [headless]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="headless" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CallbackTest" />
+        <item itemvalue="Gradle.CallbackTest (1)" />
+        <item itemvalue="Gradle.seleniumProject [headless]" />
+        <item itemvalue="Gradle.seleniumProject [headless allTests]" />
+        <item itemvalue="Gradle.seleniumProject [clean build]" />
         <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessageNullName" />
-        <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessageNullPhone" />
-        <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessagePhone" />
-        <item itemvalue="Gradle.CallbackTest.shouldTestErrorColorOfCheckbox" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671370930281</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit_19.12_00:10">
+      <created>1671390650725</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671390650725</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +267,7 @@
     <MESSAGE value="Commit_18.12_18:25" />
     <MESSAGE value="Revert &quot;Commit_18.12_18:33&quot;&#10;&#10;This reverts commit d4c63da2" />
     <MESSAGE value="Commit_18.12_18:42" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit_18.12_18:42" />
+    <MESSAGE value="Commit_19.12_00:10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit_19.12_00:10" />
   </component>
 </project>
