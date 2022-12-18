@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95704746-8f7c-4753-aef7-4d26327fbfb7" name="Changes" comment="Commit_18.12_18:33">
+    <list default="true" id="95704746-8f7c-4753-aef7-4d26327fbfb7" name="Changes" comment="Commit_18.12_18:25">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/Win/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/web/CallbackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/web/CallbackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,14 +220,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671369914645</updated>
     </task>
-    <task id="LOCAL-00004" summary="Commit_18.12_18:33">
-      <created>1671370426529</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1671370426529</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +238,6 @@
     <MESSAGE value="Commit_18.12_14:43" />
     <MESSAGE value="Commit_18.12_18:19" />
     <MESSAGE value="Commit_18.12_18:25" />
-    <MESSAGE value="Commit_18.12_18:33" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit_18.12_18:33" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit_18.12_18:25" />
   </component>
 </project>
