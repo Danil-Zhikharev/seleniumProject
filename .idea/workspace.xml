@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95704746-8f7c-4753-aef7-4d26327fbfb7" name="Changes" comment="" />
+    <list default="true" id="95704746-8f7c-4753-aef7-4d26327fbfb7" name="Changes" comment="Commit_18.12_18:42">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/web/CallbackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/web/CallbackTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +112,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CallbackTest.shouldTestErrorMessageCheckbox" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CallbackTest.shouldTestErrorMessageNullName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -120,7 +125,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorMessageCheckbox&quot;" />
+            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorMessageNullName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -130,7 +135,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CallbackTest.shouldTestErrorMessageName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CallbackTest.shouldTestErrorMessageNullPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -143,7 +148,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorMessageName&quot;" />
+            <option value="&quot;ru.netology.web.CallbackTest.shouldTestErrorMessageNullPhone&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,10 +184,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CallbackTest" />
-        <item itemvalue="Gradle.CallbackTest.shouldTestErrorColorOfCheckbox" />
-        <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessageCheckbox" />
-        <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessageName" />
+        <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessageNullName" />
+        <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessageNullPhone" />
         <item itemvalue="Gradle.CallbackTest.shouldTestErrorMessagePhone" />
+        <item itemvalue="Gradle.CallbackTest.shouldTestErrorColorOfCheckbox" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671370910332</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit_18.12_18:42">
+      <created>1671370930281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671370930281</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +254,7 @@
     <MESSAGE value="Commit_18.12_18:19" />
     <MESSAGE value="Commit_18.12_18:25" />
     <MESSAGE value="Revert &quot;Commit_18.12_18:33&quot;&#10;&#10;This reverts commit d4c63da2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Commit_18.12_18:33&quot;&#10;&#10;This reverts commit d4c63da2" />
+    <MESSAGE value="Commit_18.12_18:42" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit_18.12_18:42" />
   </component>
 </project>

@@ -6,16 +6,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.List;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class CallbackTest {
-    private WebDriver driver;
+    WebDriver driver;
 
     @BeforeAll
     static void setUpAll() {
@@ -23,14 +21,17 @@ public class CallbackTest {
     }
 
     @BeforeEach
-    void setUp() {
-        driver = new ChromeDriver();
+    public void setUp() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
     }
 
     @AfterEach
-    void tearDown() {
+    void teardown() {
         driver.quit();
-        driver = null;
     }
 
     @Test
@@ -44,7 +45,7 @@ public class CallbackTest {
         String actual = driver.findElement(By.cssSelector("p[data-test-id=order-success]")).getText().trim();
         assertEquals(actual, expected);
         String expectedTitle = "Заявка на дебетовую карту";
-        String actualTitle = driver.findElement(By.xpath("//h2[@class='heading heading_size_l heading_theme_alfa-on-white']")).getText().trim();
+        String actualTitle = driver.findElement(By.xpath("//h2[contains(text(),'Заявка на дебетовую карту')]")).getText().trim();
         assertEquals(actualTitle, expectedTitle);
     }
 
@@ -52,10 +53,23 @@ public class CallbackTest {
     void shouldTestErrorMessageName() throws InterruptedException {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Ivanov Ivan");
+        driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79126178980");
+        driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
         driver.findElement(By.className("button")).click();
-        List<WebElement> input__sub = driver.findElements(By.xpath(".//span[@class='input__sub']"));
         String expected = "Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.";
-        String actual = input__sub.get(0).getText().trim();
+        String actual = driver.findElement(By.cssSelector("span[data-test-id='name'].input_invalid .input__sub")).getText().trim();
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldTestErrorMessageNullName() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys(" ");
+        driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79126178980");
+        driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button")).click();
+        String expected = "Поле обязательно для заполнения";
+        String actual = driver.findElement(By.cssSelector("span[data-test-id='name'].input_invalid .input__sub")).getText().trim();
         assertEquals(actual, expected);
     }
 
@@ -64,21 +78,31 @@ public class CallbackTest {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Иванов Иван");
         driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+374091105218");
+        driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
         driver.findElement(By.className("button")).click();
-        List<WebElement> input__sub = driver.findElements(By.xpath(".//span[@class='input__sub']"));
         String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
-        String actual = input__sub.get(1).getText().trim();
+        String actual = driver.findElement(By.cssSelector("span[data-test-id='phone'].input_invalid .input__sub")).getText().trim();
         assertEquals(actual, expected);
     }
 
     @Test
-    void shouldTestErrorColorOfCheckbox() throws InterruptedException {
+    void shouldTestErrorMessageNullPhone() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Иванов Иван");
+        driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys(" ");
+        driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button")).click();
+        String expected = "Поле обязательно для заполнения";
+        String actual = driver.findElement(By.cssSelector("span[data-test-id='phone'].input_invalid .input__sub")).getText().trim();
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldTestErrorOfCheckbox() throws InterruptedException, ClassNotFoundException {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Иванов Иван");
         driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79126178980");
         driver.findElement(By.className("button")).click();
-        String actual = driver.findElement(By.className("checkbox__text")).getCssValue("color");
-        String expected = "rgba(255, 92, 92, 1)";
-        assertEquals(actual, expected);
+        driver.findElement(By.cssSelector("label[data-test-id=agreement].input_invalid")).isDisplayed();
     }
 }
